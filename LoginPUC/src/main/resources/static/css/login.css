@@ -133,3 +133,9 @@ body, html {
     margin-left: 5px;
     margin-bottom: 0;
 }
+.mensagem-erro {
+    color: #941b0c;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}

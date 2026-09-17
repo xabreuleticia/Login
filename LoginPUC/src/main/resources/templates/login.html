@@ -12,8 +12,11 @@
             <img th:src="@{/images/faculdade.jpg}" alt="Logo faculdade">
         </div>
         <div class="login-form">
-            <form th:action="@{login}" method="post">
+            <form th:action="@{/login}" method="post">
                 <h4 class="login-title">Login</h4>
+                <div th:if="${param.error}" class="mensagem-erro">
+                    Usuário ou senha incorretos.
+                </div>
                 <input type="text" id="username" name="username" placeholder="Username" required>
                 <input type="password" id="password" name="password" placeholder="senha" required>
                 <div class="login-button-container">

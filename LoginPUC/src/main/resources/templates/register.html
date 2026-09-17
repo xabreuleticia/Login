@@ -12,10 +12,15 @@
             <img th:src="@{/images/faculdade.jpg}" alt="Logo faculdade">
         </div>
         <div class="login-form">
-            <form th:action="@{login}" method="post" class="login-form">
+            <form th:action="@{/register}" method="post" class="login-form">
                 <h4 class="login-title">Cadastre-se</h4>
-                <input type="nome" id="nome" name="nome" placeholder="Nome" required>
-                <input type="e-mail" id="e-mail" name="e-mail" placeholder="E-mail" required>
+                
+                <div th:if="${erro}" class="mensagem-erro">
+                    <span th:text="${erro}"></span>
+                </div>
+
+                <input type="text" name="username" placeholder="Nome/usuário">
+                <input type="email" name="email" placeholder="E-mail">
                 <input type="cpf" id="cpf" name="cpf" placeholder="CPF" required>
                 <input type="endereco" id="endereco" name="endereco" placeholder="Endereço" required>
                 <select name="Tipo de usuário" id="tipoUsuario" placeholder="Tipo de usuário" required>
@@ -25,9 +30,10 @@
                     <option value="Funcionário">Funcionário</option>
                     <option value="Administração">Administração</option>
                 </select>
-                <input type="password" id="password" name="password" placeholder="senha" required>
+                <input type="password" name="password" placeholder="Senha">
+                <input type="password" name="confirmPassword" placeholder="Confirmar senha">
                 <div class="login-button-container">
-                    <button type="submit">Registrar</button>
+                    <button type="submit">Cadastrar</button>
                 </div>
                 <p class="login-redirect-options">
                     Já tem cadastro?<br>
