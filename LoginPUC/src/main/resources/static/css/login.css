@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color:#0e1c36;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -17,9 +21,8 @@ body, html {
 .login-container {
     display: flex;
     width: 60vw;
-    height: auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     background-color: #FCFEFF;
 }
@@ -52,13 +55,13 @@ body, html {
 }
 
 .login-title {
-    color: gray;
+    color: #0e1c36;
     text-align: center;
     font-weight: bolder;
     margin-bottom: 1rem;
 }
 
-.login-form input {
+.login-form input{
     width: 100%;
     padding: 0.5rem;
     margin-top: 0.5rem;
@@ -67,11 +70,26 @@ body, html {
     font-size: 1rem;
 }
 
+.login-form select{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.login-form select option{
+    color: #666;
+}
+
 .login-button-container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin-top: 1rem;
 }
 
@@ -79,10 +97,16 @@ body, html {
     width: 100%;
     height: 5vh;
     padding: 0.75rem;
-    background-color: #81B1C3;
+    background-color: #0e1c36;
     color: white;
     border: none;
     cursor: pointer;
+    text-align: center;
+    align-items: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .login-redirect-options {
@@ -94,7 +118,7 @@ body, html {
 }
 
 .login-redirect-options a {
-    color: #81B1C3;
+    color: #598392;
     font-weight: bold;
 }
 
@@ -103,6 +127,6 @@ body, html {
 }
 
 .login-redirect-options a:last-child {
-    color: #FF743C;
+    color: #941b0c;
     margin-left: 5px;
 }
