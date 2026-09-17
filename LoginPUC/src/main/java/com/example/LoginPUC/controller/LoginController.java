@@ -8,11 +8,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class LoginController {
 
+    @GetMapping("/") 
+    public String inicio() { 
+        return "login"; 
+    }
+    
     @GetMapping("/login") // http://localhost:8080/login
     public String login() {
         return "login";
         // Retorna o nome do arquivo TML (login.html)
         // que será renderizado
     }
-    
+
+    @GetMapping("/register")
+    public String register() {
+        return "register";
+    }
+
+    @GetMapping("/recoverpassword")
+    public String recoverpassword() {
+        return "recoverpassword";
+    }
+
 }
