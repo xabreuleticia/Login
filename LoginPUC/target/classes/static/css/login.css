@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color:#0e1c36;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -72,6 +76,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin-top: 1rem;
 }
 
@@ -83,6 +88,12 @@ body, html {
     color: white;
     border: none;
     cursor: pointer;
+    text-align: center;
+    align-items: center;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .login-redirect-options {
