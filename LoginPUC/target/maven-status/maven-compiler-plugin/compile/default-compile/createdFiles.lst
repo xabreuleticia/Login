@@ -1,0 +1,4 @@
+com\example\LoginPUC\config\SecurityConfig.class
+com\example\LoginPUC\model\Usuario.class
+com\example\LoginPUC\controller\LoginController.class
+com\example\LoginPUC\LoginPucApplication.class
