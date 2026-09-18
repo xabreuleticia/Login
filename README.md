@@ -1,4 +1,4 @@
-# 🔐 LoginPUC
+# LoginPUC
 
 Sistema completo de autenticação e cadastro de usuários desenvolvido com **Spring Boot** e **Thymeleaf**, como parte da Atividade 02 da disciplina de Desenvolvimento e Integração de Aplicações Web — PUC.
 
@@ -6,48 +6,44 @@ Este projeto implementa uma aplicação web com telas de login, registro e recup
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Praticar e demonstrar conceitos de:
 
-- ☕ Spring Boot
-- 🎨 Thymeleaf
-- 🔐 Autenticação de usuários
-- 👤 Cadastro de usuários
-- 🌐 Endpoints HTTP e Controllers
-- 🔑 Criptografia e segurança de senhas
-- 📧 Integração com serviços externos de e-mail (recuperação de senha)
+- Spring Boot
+- Thymeleaf
+- Autenticação de usuários
+- Cadastro de usuários
+- Endpoints HTTP e Controllers
+- Criptografia e segurança de senhas
+- Integração com serviços externos de e-mail (recuperação de senha)
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
-- ✅ Tela de login (`/login`) com validação de credenciais
-- ✅ Tela de cadastro de novos usuários (`/register`)
-- ✅ Validações de formulário (campos obrigatórios, e-mail inválido, senhas incompatíveis, usuários duplicados)
-- ✅ Armazenamento seguro de senhas (hash/criptografia)
-- ✅ Controle de sessão e logout
-- ✅ Proteção de rotas para usuários não autenticados
-- 🏆 *(Opcional)* Recuperação de senha via e-mail (`/recoverpassword`)
-- 📱 Layout responsivo
+- Tela de login (`/login`) com validação de credenciais
+- Tela de cadastro de novos usuários (`/register`)
+- Validações de formulário (campos obrigatórios, e-mail inválido, senhas incompatíveis, usuários duplicados)
+- Armazenamento seguro de senhas (hash/criptografia)
+- Controle de sessão e logout
+- Proteção de rotas para usuários não autenticados
+- Layout responsivo
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **Java**
-- **Spring Boot** [versão]
+- **Spring Boot** 
 - **Spring Security** — autenticação e autorização
 - **Thymeleaf** — renderização de páginas HTML no backend
 - **Spring Data JPA** — persistência de dados
-- **[Banco de dados]** — ex: H2, MySQL ou PostgreSQL
-- **Maven** — gerenciamento de dependências e build
-- **[Biblioteca de envio de e-mail, se aplicável]** — ex: Spring Mail / JavaMailSender
 - **HTML5, CSS3, JavaScript** — interface visual
 
 ---
 
-## 🌐 Endpoints
+## Endpoints
 
 | Método | Endpoint            | Descrição                                      |
 |--------|----------------------|-------------------------------------------------|
@@ -61,7 +57,7 @@ Praticar e demonstrar conceitos de:
 
 ---
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```
 src/
@@ -90,18 +86,17 @@ src/
 
 ---
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 Antes de rodar o projeto, certifique-se de ter instalado:
 
 - [Java JDK 17+](https://adoptium.net/)
 - [Apache Maven 3.9+](https://maven.apache.org/download.cgi)
 - [Git](https://git-scm.com/)
-- [Banco de dados, se aplicável — ex: MySQL 8+]
 
 ---
 
-## ▶️ Como executar o projeto
+## Como executar o projeto
 
 1. **Clone o repositório**
    ```bash
@@ -135,7 +130,7 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 
 ---
 
-## 🔑 Configuração e credenciais
+## Configuração e credenciais
 
 Este projeto utiliza credenciais externas que **não devem ser publicadas no repositório**. Configure-as via `application.properties` local (não versionado) ou variáveis de ambiente.
 
@@ -154,11 +149,11 @@ spring.mail.username=${EMAIL_USERNAME}
 spring.mail.password=${EMAIL_PASSWORD}
 ```
 
-> ⚠️ **Nunca** faça commit de senhas, tokens ou chaves de API reais. Utilize variáveis de ambiente ou um arquivo `.env` incluído no `.gitignore`.
+> **Nunca** faça commit de senhas, tokens ou chaves de API reais. Utilize variáveis de ambiente ou um arquivo `.env` incluído no `.gitignore`.
 
 ---
 
-## 🧪 Rodando os testes
+## Rodando os testes
 
 ```bash
 mvn test
@@ -166,25 +161,24 @@ mvn test
 
 ---
 
-## 👥 Equipe
+## Equipe
 
 | Nome              | GitHub                                    |
 |-------------------|--------------------------------------------|
-| [Integrante 1]    | [@usuario1](https://github.com/usuario1)   |
-| [Integrante 2]    | [@usuario2](https://github.com/usuario2)   |
+| [Integrante 1]    | [@kemilyy](https://github.com/kemilyy)   |
+| [Integrante 2]    | [@xabreuleticia](https://github.com/xabreuleticia)   |
 
 ---
 
-## 📚 Projetos de referência
+## Projetos de referência
 
 Este projeto foi desenvolvido com base nos seguintes materiais de estudo da disciplina:
 
 - [SecureLoginPUC](https://github.com/)
 - [SecureLoginPUC_2](https://github.com/)
-- [SendEmail — exemplo de envio de e-mails](https://github.com/)
 
 ---
 
-## 📄 Licença
+## Licença
 
 Este projeto foi desenvolvido para fins acadêmicos, como parte da disciplina [nome da disciplina] da PUC.
