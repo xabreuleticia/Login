@@ -11,23 +11,19 @@ import java.util.List;
 
 import org.springframework.ui.Model;
 
-// @Restcontroller -> API REST -> BackEnd
-// @Controller -> MVC -> FrontEnd + BackEnd
 @Controller
 public class LoginController {
 
     private List<Usuario> usuarios = new ArrayList<>();
 
-    @GetMapping("/") 
-    public String inicio() { 
-        return "login"; 
+    @GetMapping("/")
+    public String inicio() {
+        return "login";
     }
-    
-    @GetMapping("/login") // http://localhost:8080/login
+
+    @GetMapping("/login")
     public String login() {
         return "login";
-        // Retorna o nome do arquivo TML (login.html)
-        // que será renderizado
     }
 
     @GetMapping("/register")
@@ -46,13 +42,26 @@ public class LoginController {
             @RequestParam String email,
             @RequestParam String password,
             @RequestParam String confirmPassword,
+            @RequestParam String cpf,
+            @RequestParam String endereco,
+            @RequestParam String tipoUsuario,
             Model model) {
+
+        // Mantém os dados preenchidos caso exista algum erro
+        model.addAttribute("username", username);
+        model.addAttribute("email", email);
+        model.addAttribute("cpf", cpf);
+        model.addAttribute("endereco", endereco);
+        model.addAttribute("tipoUsuario", tipoUsuario);
 
         // Campos vazios
         if (username.trim().isEmpty()
                 || email.trim().isEmpty()
                 || password.isEmpty()
-                || confirmPassword.isEmpty()) {
+                || confirmPassword.isEmpty()
+                || cpf.trim().isEmpty()
+                || endereco.trim().isEmpty()
+                || tipoUsuario.trim().isEmpty()) {
 
             model.addAttribute("erro", "Preencha todos os campos.");
             return "register";
@@ -75,30 +84,50 @@ public class LoginController {
         // Senha muito curta
         if (password.length() < 8) {
 
-            model.addAttribute("erro", "A senha deve ter pelo menos 8 caracteres.");
+            model.addAttribute(
+                    "erro",
+                    "A senha deve ter pelo menos 8 caracteres."
+            );
+
             return "register";
         }
 
-        // Usuário já cadastrado
+        // Usuário ou e-mail já cadastrado
         for (Usuario usuario : usuarios) {
 
             if (usuario.getUsername().equalsIgnoreCase(username)) {
-                model.addAttribute("erro", "Este usuário já está cadastrado.");
+
+                model.addAttribute(
+                        "erro",
+                        "Este usuário já está cadastrado."
+                );
+
                 return "register";
             }
 
             if (usuario.getEmail().equalsIgnoreCase(email)) {
-                model.addAttribute("erro", "Este e-mail já está cadastrado.");
+
+                model.addAttribute(
+                        "erro",
+                        "Este e-mail já está cadastrado."
+                );
+
                 return "register";
             }
         }
 
         // Cadastra o usuário
-        Usuario novoUsuario = new Usuario(username, email, password);
+        Usuario novoUsuario = new Usuario(
+                username,
+                email,
+                password,
+                cpf,
+                endereco,
+                tipoUsuario
+        );
 
         usuarios.add(novoUsuario);
 
         return "redirect:/login";
     }
-
 }

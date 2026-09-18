@@ -19,10 +19,12 @@
                     <span th:text="${erro}"></span>
                 </div>
 
-                <input type="text" name="username" placeholder="Nome/usuário">
-                <input type="email" name="email" placeholder="E-mail">
-                <input type="cpf" id="cpf" name="cpf" placeholder="CPF" required>
-                <input type="endereco" id="endereco" name="endereco" placeholder="Endereço" required>
+                <input type="text" name="username" placeholder="Nome/usuário" th:value="${username}" required>
+                <input type="email" name="email" placeholder="E-mail" th:value="${email}" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <input type="password" name="confirmPassword" placeholder="Confirmar senha" required>
+                <input type="text" id="cpf" name="cpf" placeholder="CPF" th:value="${cpf}" required>
+                <input type="text"id="endereco" name="endereco" placeholder="Endereço" th:value="${endereco}" required>
                 <select name="Tipo de usuário" id="tipoUsuario" placeholder="Tipo de usuário" required>
                     <option value="" selected disabled>Tipo de usuário</option>
                     <option value="Aluno">Aluno</option>
