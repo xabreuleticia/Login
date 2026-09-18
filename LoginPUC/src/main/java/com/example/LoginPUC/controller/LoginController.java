@@ -130,4 +130,25 @@ public class LoginController {
 
         return "redirect:/login";
     }
+
+    @PostMapping("/recoverpassword")
+    public String recuperarSenha(
+            @RequestParam String email,
+            Model model) {
+
+        if (email.trim().isEmpty()) {
+            model.addAttribute("erro", "Preencha o e-mail.");
+            return "recoverpassword";
+        }
+
+        if (!email.contains("@") || !email.contains(".")) {
+            model.addAttribute("erro", "Digite um e-mail válido.");
+            return "recoverpassword";
+        }
+
+        model.addAttribute("sucesso",
+                "Se o e-mail estiver cadastrado, as instruções serão enviadas.");
+
+        return "recoverpassword";
+    }
 }
