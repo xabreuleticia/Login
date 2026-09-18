@@ -16,12 +16,6 @@ public class LoginController {
 
     private List<Usuario> usuarios = new ArrayList<>();
 
-    private final EmailService emailService;
-
-    public LoginController(EmailService emailService) {
-        this.emailService = emailService;
-    }
-
     @GetMapping("/")
     public String inicio() {
         return "login";
